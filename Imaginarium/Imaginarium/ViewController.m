@@ -7,12 +7,24 @@
 //
 
 #import "ViewController.h"
+#import "imageViewController.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[imageViewController class]]) {
+        imageViewController *ivc = (imageViewController *)segue.destinationViewController;
+        ivc.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://images.apple.com/cn/your-verse/home/images/hero.jpg"]];
+        ivc.title = segue.identifier;
+    }
+}
+
+
 
 - (void)viewDidLoad
 {

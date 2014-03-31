@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hXq-xc-oEl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller - Imaginarium-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -15,11 +15,81 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPM-nF-nXl">
+                                <rect key="frame" x="137" y="269" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Hero">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="w0A-z4-Mu0" kind="push" identifier="hero" id="ivb-gw-gVX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XPM-nF-nXl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="137" id="MjH-dH-OML"/>
+                            <constraint firstItem="XPM-nF-nXl" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="VXG-o7-XX2"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Imaginarium" id="Rfz-fo-29G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="606" y="120"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="src-3x-G0y">
+            <objects>
+                <viewController id="w0A-z4-Mu0" customClass="imageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j6E-02-yYt"/>
+                        <viewControllerLayoutGuide type="bottom" id="0WW-yn-3mS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FX9-zf-1xw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8PV-Zo-PKB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8PV-Zo-PKB" secondAttribute="trailing" id="51c-PA-pwN"/>
+                            <constraint firstItem="8PV-Zo-PKB" firstAttribute="leading" secondItem="FX9-zf-1xw" secondAttribute="leading" id="72r-aZ-Opb"/>
+                            <constraint firstItem="8PV-Zo-PKB" firstAttribute="top" secondItem="FX9-zf-1xw" secondAttribute="top" id="Irv-mI-Xdc"/>
+                            <constraint firstAttribute="bottom" secondItem="8PV-Zo-PKB" secondAttribute="bottom" id="bF9-fe-vb9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QFG-Fy-Vbm"/>
+                    <connections>
+                        <outlet property="scrollView" destination="8PV-Zo-PKB" id="EtL-7P-jMB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZ8-ul-V6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="120"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WPz-0Z-jKB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hXq-xc-oEl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HJd-4b-YLx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="NUp-6P-gid"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9aW-zY-Do1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="120"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
