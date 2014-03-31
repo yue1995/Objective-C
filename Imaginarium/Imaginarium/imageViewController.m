@@ -22,7 +22,6 @@
     _scrollView.maximumZoomScale = 2.0;
     _scrollView.minimumZoomScale = 0.2;
     _scrollView.delegate = self;
-    //self.scrollView.contentSize = self.image ? self.image.size : CGSizeZero;
     [self startDownloadingImage];
 }
 
