@@ -19,7 +19,8 @@
 {
     if ([segue.destinationViewController isKindOfClass:[imageViewController class]]) {
         imageViewController *ivc = (imageViewController *)segue.destinationViewController;
-        ivc.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://images.apple.com/cn/your-verse/home/images/hero.jpg"]];
+        ivc.imageURL = [NSURL URLWithString:[NSString stringWithFormat:
+                                             @"http://images.apple.com/cn/your-verse/home/images/hero.jpg"]];
         ivc.title = segue.identifier;
     }
 }
