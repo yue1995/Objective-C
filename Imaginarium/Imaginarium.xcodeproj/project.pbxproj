@@ -462,6 +462,7 @@
 				AE898FCD18E905EA00B25097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE898FCE18E905EA00B25097 /* Build configuration list for PBXNativeTarget "ImaginariumTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +471,7 @@
 				AE898FD018E905EA00B25097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
